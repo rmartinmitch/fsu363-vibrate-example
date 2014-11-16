@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8" />
+<title>Vibrate</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/jquery.mobile.min.css">
+
+<script src="cordova.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+
+    // Wait for PhoneGap to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap is ready
+    //
+    function onDeviceReady() {
+        navigator.notification.vibrate(2000);
+    }
+
+    // Show a custom alert
+    //
+    function showAlert() {
+        navigator.notification.alert(
+            'You are the winner!',  // message
+            'Game Over',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+    // Beep three times
+    //
+    function playBeep() {
+        navigator.notification.beep(3);
+        navigator.notification.vibrate(2500);
+    }
+
+    // Vibrate for 2 seconds
+    //
+    function vibrate() {
+        navigator.notification.vibrate(2000);
+    }
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+<div data-role="page" data-theme="a">
+
+  <div data-role="header" data-fullscreen="true">
+    <h1>Vibrating Phone</h1>
+  </div>
+
+  <div data-role=content>
+  
+    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
+    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
+    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+            
+  </div>
+
+  <div data-role="footer" data-position="fixed" data-fullscreen="true">
+    <h4>Rick Mitchell</h4>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -29,9 +29,9 @@
     //
     function showAlert() {
         navigator.notification.alert(
-            'You are the winner!',  // message
-            'Game Over',            // title
-            'Done'                  // buttonName
+            'You Move Me, Baby!',  // message
+            'Over and',            
+            'Out'                  
         );
     }
 
@@ -50,7 +50,13 @@
 
     </script>
 
-
+<style type="text/css">
+<!--
+h2 {
+	text-align: center;
+}
+-->
+</style>
 
 </head>
 
@@ -64,9 +70,9 @@
 
   <div data-role=content>
   
-    <p><a href="#" onclick="showAlert(); return false;">Show Alert</a></p>
-    <p><a href="#" onclick="playBeep(); return false;">Play Beep</a></p>
-    <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
+    <h2><a href="#" onClick="showAlert(); return false;">Say Something Appropirate</a></h2>
+    <h2><a href="#" onClick="playBeep(); return false;">Play Beep</a></h2>
+    <h2><a href="#" onClick="vibrate(); return false;">Vibrate</a></h2>
             
   </div>
 

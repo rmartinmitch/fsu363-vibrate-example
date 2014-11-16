@@ -7,7 +7,7 @@
 		versionCode = "1"
         version   	= "1.0.0">
 
-    <name>Simple App</name>
+    <name>Vibrating Phone</name>
 
     <description>
         A mobile app that plays beep and vibrates phone

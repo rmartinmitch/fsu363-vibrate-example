@@ -15,12 +15,16 @@
 
 <script type="text/javascript" charset="utf-8">
 
-    // Wait for PhoneGap to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
+	function readyPhonegap () {
+	
+		// Wait for PhoneGap to load
+    	//
+    	document.addEventListener("deviceready", onDeviceReady, false);
+	    // PhoneGap is ready
+    	//
 
-    // PhoneGap is ready
-    //
+	
+	}
     function onDeviceReady() {
         navigator.notification.vibrate(2000);
     }
@@ -30,8 +34,8 @@
     function showAlert() {
         navigator.notification.alert(
             'You Move Me, Baby!',  // message
-            'Over and',            
-            'Out'                  
+            'alert',            
+            'msg'                  
         );
     }
 
@@ -60,7 +64,7 @@ h2 {
 
 </head>
 
-<body>
+<body onLoad="readyPhonegap">
 
 <div data-role="page" data-theme="a">
 
